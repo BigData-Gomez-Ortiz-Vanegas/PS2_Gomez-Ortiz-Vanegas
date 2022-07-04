@@ -87,7 +87,27 @@ write.csv(hog_train ,"hogares_train.csv") #exportar
 
 #gráficos
 
-ggplot(combined,aes(x= hog_train$Ingtot, y=hog_test$Ingtot))
+#cajas y bigotes
+
+library(ggplot2)
+library(gridExtra)
+library(gapminder)
+library(dplyr)
+
+#gráfico 1
+
+label= c("Entrenamiento", "Prueba")
+
+#Ingreso
+boxplot(hog_train$Ingtot, hog_test$Ingtot, ylab="Ingreso Total", names = label) 
+#Número de personas en el hogar
+boxplot(hog_train$Nper, hog_test$Nper, ylab="Número de personas en el hogar", names = label)
+
+boxplot(hog_train$Ingtot ~ hog_train$sexo_jefe_hogar, xlab = "sexo del jefe/a del hogar", ylab = "Ingreso total") #gráficos anexo 4
+boxplot(hog_test$Ingtot ~ hog_test$sexo_jefe_hogar, xlab = "sexo del jefe/a del hogar", ylab = "Ingreso total")
+
+boxplot(hog_train$Ingtot/hog_train$Nper ~ hog_train$Nper, xlab = "Número de personas en el hogar", ylab = "Ingreso total") #gráficos anexo 5
+boxplot(hog_test$Ingtot/hog_test$Nper ~ hog_test$Nper, xlab = "Número de personas en el hogar", ylab = "Ingreso total")
 
 #tablas
 summary(hog_test$Ingtot) #ingreso total
