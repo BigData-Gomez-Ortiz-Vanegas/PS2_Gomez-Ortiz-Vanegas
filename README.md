@@ -13,7 +13,7 @@ The repository contains four folders, each of which is described below:
 - `document`: contains the instructions and the final document in `pdf` format.
 - `stores` : contains the final data set used.
 - `scripts`: contains all scripts.
-- `views`: contains all figures and tables.
+- `views`: contains all the graphs.
 
 
 ## :mag_right: Instructions
