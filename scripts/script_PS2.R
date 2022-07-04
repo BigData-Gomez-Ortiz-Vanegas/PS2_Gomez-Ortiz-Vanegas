@@ -83,3 +83,40 @@ hog_train$r_jefe_hogar <- NULL
 write.csv(hog_test ,"hogares_test.csv") #exportar
 write.csv(hog_train ,"hogares_train.csv") #exportar
 
+## 1. Estadísticas descriptivas
+
+#gráficos
+
+ggplot(combined,aes(x= hog_train$Ingtot, y=hog_test$Ingtot))
+
+#tablas
+summary(hog_test$Ingtot) #ingreso total
+summary(hog_test$sexo_jefe_hogar)#sexo del jefe del hogar
+summary(hog_test$P5000)#cantidad de cuartos en el hogar
+summary(hog_test$P5010)#cantidad de cuartos en los que duermen las personas del hogar
+summary(hog_test$P5100)#cuota amortización
+summary(hog_test$P5130)#si tuviera que pagar arriendo cuánto sería
+summary(hog_test$P5140)#pago por arriendo
+summary(hog_test$Nper)#número de personas en el hogar
+summary(hog_test$Npersug)#número de personas en la unidad de gasto
+summary(hog_test$Li)#línea de indigencia
+summary(hog_test$Lp)#línea de pobreza
+
+summary(hog_train$Ingtot)
+summary(hog_train$sexo_jefe_hogar)
+summary(hog_train$P5000)#cantidad de cuartos en el hogar
+summary(hog_train$P5010)#cantidad de cuartos en los que duermen las personas del hogar
+summary(hog_train$P5100)#cuota amortización
+summary(hog_train$P5130)#si tuviera que pagar arriendo cuánto sería
+summary(hog_train$P5140)#pago por arriendo
+summary(hog_train$Nper)#número de personas en el hogar
+summary(hog_train$Npersug)#número de personas en la unidad de gasto
+summary(hog_train$Ingtotug)#Ingreso total de la unidad de gasto antes de imputación de arriendo a propietarios y usufructuarios 
+summary(hog_train$Ingtotugarr)#Ingreso total de la unidad de gasto con imputación de arriendo a propietarios y usufructuarios
+summary(hog_train$Ingpcug)#Ingreso percápita de la unidad de gasto con imputación de arriendo a propietarios y usufructuarios 
+summary(hog_train$Li)#línea de indigencia
+summary(hog_train$Lp)#línea de pobreza
+summary(hog_train$Pobre)#Pobre =1, 0 d.l.c.
+summary(hog_train$Indigente)#Indigente =1, 0 d.l.c.
+summary(hog_train$Npobres)#número de pobres
+summary(hog_train$Nindigentes)#número de indigentes
