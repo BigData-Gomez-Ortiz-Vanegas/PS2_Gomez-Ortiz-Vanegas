@@ -1,4 +1,4 @@
-# Problem Set 1 - Gómez, Ortiz & Vanegas
+# Problem Set 2 - Gómez, Ortiz & Vanegas
 ## Project Introduction: Predicting Income
 
 The general objective of this project is to construct a predictive model of household poverty using the data of Colombia. 
