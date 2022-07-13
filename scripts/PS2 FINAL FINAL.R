@@ -1,4 +1,4 @@
-setwd("~/Desktop/Taller 1 AI")
+setwd("~/Desktop/Problem Set 2")
 
 
 rm(list=ls())
